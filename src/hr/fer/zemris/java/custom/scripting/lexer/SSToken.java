@@ -9,39 +9,39 @@ package hr.fer.zemris.java.custom.scripting.lexer;
  * @author Mario Bobic
  */
 public class SSToken {
-	
-	/** Type of the token. */
-	private final SSTokenType type;
-	/** Value that this token holds. */
-	private final Object value;
-	
-	/**
-	 * Constructs an instance of SSToken with the given token type and value.
-	 * 
-	 * @param type type of the token
-	 * @param value value of the token
-	 */
-	public SSToken(SSTokenType type, Object value) {
-		this.type = type;
-		this.value = value;
-	}
-	
-	/**
-	 * Returns the type of this token.
-	 * 
-	 * @return the type of this token
-	 */
-	public SSTokenType getType() {
-		return type;
-	}
-	
-	/**
-	 * Returns the value of this token.
-	 * 
-	 * @return the value of this token
-	 */
-	public Object getValue() {
-		return value;
-	}
-	
+
+    /** Type of the token. */
+    private final SSTokenType type;
+    /** Value that this token holds. */
+    private final Object value;
+
+    /**
+     * Constructs an instance of SSToken with the given token type and value.
+     *
+     * @param type type of the token
+     * @param value value of the token
+     */
+    public SSToken(SSTokenType type, Object value) {
+        this.type = type;
+        this.value = value;
+    }
+
+    /**
+     * Returns the type of this token.
+     *
+     * @return the type of this token
+     */
+    public SSTokenType getType() {
+        return type;
+    }
+
+    /**
+     * Returns the value of this token.
+     *
+     * @return the value of this token
+     */
+    public Object getValue() {
+        return value;
+    }
+
 }

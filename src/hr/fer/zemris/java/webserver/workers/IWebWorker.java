@@ -8,12 +8,12 @@ import hr.fer.zemris.java.webserver.RequestContext;
  * @author Mario Bobic
  */
 public interface IWebWorker {
-	
-	/**
-	 * Processes the request specified by the <tt>context</tt>.
-	 * 
-	 * @param context the request context
-	 */
-	public void processRequest(RequestContext context);
-	
+
+    /**
+     * Processes the request specified by the <tt>context</tt>.
+     *
+     * @param context the request context
+     */
+    public void processRequest(RequestContext context);
+
 }

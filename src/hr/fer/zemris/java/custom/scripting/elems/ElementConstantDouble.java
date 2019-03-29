@@ -12,27 +12,27 @@ import hr.fer.zemris.java.custom.scripting.parser.SmartScriptParser;
  */
 public class ElementConstantDouble extends Element {
 
-	/** The constant double value of this element. */
-	private final double value;
-	
-	/**
-	 * Constructs an instance of ElementConstantDouble with the given constant
-	 * double value.
-	 * 
-	 * @param value the constant double value
-	 */
-	public ElementConstantDouble(double value) {
-		super();
-		this.value = value;
-	}
+    /** The constant double value of this element. */
+    private final double value;
 
-	/**
-	 * Returns a string representation of a constant double value stored in this
-	 * element.
-	 */
-	@Override
-	public String asText() {
-		return Double.toString(value);
-	}
+    /**
+     * Constructs an instance of ElementConstantDouble with the given constant
+     * double value.
+     *
+     * @param value the constant double value
+     */
+    public ElementConstantDouble(double value) {
+        super();
+        this.value = value;
+    }
+
+    /**
+     * Returns a string representation of a constant double value stored in this
+     * element.
+     */
+    @Override
+    public String asText() {
+        return Double.toString(value);
+    }
 
 }

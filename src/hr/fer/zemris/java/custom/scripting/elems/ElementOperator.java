@@ -12,26 +12,26 @@ import hr.fer.zemris.java.custom.scripting.parser.SmartScriptParser;
  */
 public class ElementOperator extends Element {
 
-	/** The operator symbol. */
-	private final String symbol;
-	
-	/**
-	 * Constructs an instance of ElementOperator with the given operator symbol.
-	 * 
-	 * @param symbol symbol to be set to this operator
-	 */
-	public ElementOperator(String symbol) {
-		super();
-		this.symbol = symbol;
-	}
+    /** The operator symbol. */
+    private final String symbol;
 
-	/**
-	 * Returns a string representation of the operator symbol stored in this
-	 * element.
-	 */
-	@Override
-	public String asText() {
-		return symbol;
-	}
+    /**
+     * Constructs an instance of ElementOperator with the given operator symbol.
+     *
+     * @param symbol symbol to be set to this operator
+     */
+    public ElementOperator(String symbol) {
+        super();
+        this.symbol = symbol;
+    }
+
+    /**
+     * Returns a string representation of the operator symbol stored in this
+     * element.
+     */
+    @Override
+    public String asText() {
+        return symbol;
+    }
 
 }

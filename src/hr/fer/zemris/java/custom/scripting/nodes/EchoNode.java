@@ -20,52 +20,52 @@ import hr.fer.zemris.java.custom.scripting.lexer.SSTokenType;
  */
 public class EchoNode extends Node {
 
-	/** Elements that this EchoNode contains. */
-	private final Element[] elements;
+    /** Elements that this EchoNode contains. */
+    private final Element[] elements;
 
-	/**
-	 * Constructs an instance of EchoNode with the given array of elements.
-	 * 
-	 * @param elements elements for this EchoNode
-	 */
-	public EchoNode(Element[] elements) {
-		super();
-		this.elements = elements;
-	}
+    /**
+     * Constructs an instance of EchoNode with the given array of elements.
+     *
+     * @param elements elements for this EchoNode
+     */
+    public EchoNode(Element[] elements) {
+        super();
+        this.elements = elements;
+    }
 
-	/**
-	 * Returns the array of this EchoNode object's elements.
-	 * 
-	 * @return the array of this EchoNode object's elements
-	 */
-	public Element[] getElements() {
-		return elements;
-	}
-	
-	/**
-	 * Returns the string representation of the {@link SSTokenType#TAG_ECHO
-	 * ECHO} <tt>node</tt> and all the elements contained in the body of an ECHO
-	 * tag, with the proper formatting.
-	 */
-	@Override
-	public String toString() {
-		StringBuilder sb = new StringBuilder();
-		
-		sb	.append(TAG_OPENING)
-			.append(ECHO).append(" ");
+    /**
+     * Returns the array of this EchoNode object's elements.
+     *
+     * @return the array of this EchoNode object's elements
+     */
+    public Element[] getElements() {
+        return elements;
+    }
 
-		for (Element el : elements) {
-			sb.append(el.asText()).append(" ");
-		}
-		
-		sb.append(TAG_CLOSING);
-		
-		return sb.toString();
-	}
-	
-	@Override
-	public void accept(INodeVisitor visitor) {
-		visitor.visitEchoNode(this);
-	}
+    /**
+     * Returns the string representation of the {@link SSTokenType#TAG_ECHO
+     * ECHO} <tt>node</tt> and all the elements contained in the body of an ECHO
+     * tag, with the proper formatting.
+     */
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+
+        sb    .append(TAG_OPENING)
+            .append(ECHO).append(" ");
+
+        for (Element el : elements) {
+            sb.append(el.asText()).append(" ");
+        }
+
+        sb.append(TAG_CLOSING);
+
+        return sb.toString();
+    }
+
+    @Override
+    public void accept(INodeVisitor visitor) {
+        visitor.visitEchoNode(this);
+    }
 
 }

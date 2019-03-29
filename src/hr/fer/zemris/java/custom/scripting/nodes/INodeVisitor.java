@@ -9,32 +9,32 @@ package hr.fer.zemris.java.custom.scripting.nodes;
  */
 public interface INodeVisitor {
 
-	/**
-	 * Visits the specified {@link TextNode text node}.
-	 * 
-	 * @param node a text node
-	 */
-	void visitTextNode(TextNode node);
-	
-	/**
-	 * Visits the specified {@link ForLoopNode for-loop node}.
-	 * 
-	 * @param node a for-loop node
-	 */
-	void visitForLoopNode(ForLoopNode node);
-	
-	/**
-	 * Visits the specified {@link EchoNode echo node}.
-	 * 
-	 * @param node an echo node
-	 */
-	void visitEchoNode(EchoNode node);
-	
-	/**
-	 * Visits the specified {@link DocumentNode document node}.
-	 * 
-	 * @param node a document node
-	 */
-	void visitDocumentNode(DocumentNode node);
-	
+    /**
+     * Visits the specified {@link TextNode text node}.
+     *
+     * @param node a text node
+     */
+    void visitTextNode(TextNode node);
+
+    /**
+     * Visits the specified {@link ForLoopNode for-loop node}.
+     *
+     * @param node a for-loop node
+     */
+    void visitForLoopNode(ForLoopNode node);
+
+    /**
+     * Visits the specified {@link EchoNode echo node}.
+     *
+     * @param node an echo node
+     */
+    void visitEchoNode(EchoNode node);
+
+    /**
+     * Visits the specified {@link DocumentNode document node}.
+     *
+     * @param node a document node
+     */
+    void visitDocumentNode(DocumentNode node);
+
 }

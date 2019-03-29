@@ -19,45 +19,45 @@ import static hr.fer.zemris.java.custom.scripting.parser.SmartScriptConstantsAnd
  */
 public class ElementString extends Element {
 
-	/** The string value of this element. */
-	private final String value;
-	
-	/**
-	 * Constructs an instance of ElementString with the given string value.
-	 * 
-	 * @param value the string value for this element
-	 */
-	public ElementString(String value) {
-		super();
-		this.value = processValue(value);
-	}
-	
-	/**
-	 * Returns the string value stored in this element.
-	 */
-	@Override
-	public String asText() {
-		return value;
-	}
-	
-	/**
-	 * Processes and returns the string value without
-	 * {@link SmartScriptConstantsAndMethods#QUOT_MARK quotation mark} symbols.
-	 * 
-	 * @param value value to be processed
-	 * @return value without the surrounding quotation marks
-	 * @throw IllegalArgumentException if value does not start and end with
-	 *        &quot; symbol
-	 */
-	private static String processValue(String value) {
-		if (!(value.startsWith(QUOT_MARK) && value.endsWith(QUOT_MARK))) {
-			throw new IllegalArgumentException(
-				"Strings must start and end with " + QUOT_MARK + " symbols");
-		}
-		return value.substring(1, value.length()-1)
-				.replace("\\n", "\n")
-				.replace("\\r", "\r")
-				.replace("\\t", "\t");
-	}
+    /** The string value of this element. */
+    private final String value;
+
+    /**
+     * Constructs an instance of ElementString with the given string value.
+     *
+     * @param value the string value for this element
+     */
+    public ElementString(String value) {
+        super();
+        this.value = processValue(value);
+    }
+
+    /**
+     * Returns the string value stored in this element.
+     */
+    @Override
+    public String asText() {
+        return value;
+    }
+
+    /**
+     * Processes and returns the string value without
+     * {@link SmartScriptConstantsAndMethods#QUOT_MARK quotation mark} symbols.
+     *
+     * @param value value to be processed
+     * @return value without the surrounding quotation marks
+     * @throw IllegalArgumentException if value does not start and end with
+     *        &quot; symbol
+     */
+    private static String processValue(String value) {
+        if (!(value.startsWith(QUOT_MARK) && value.endsWith(QUOT_MARK))) {
+            throw new IllegalArgumentException(
+                "Strings must start and end with " + QUOT_MARK + " symbols");
+        }
+        return value.substring(1, value.length()-1)
+                .replace("\\n", "\n")
+                .replace("\\r", "\r")
+                .replace("\\t", "\t");
+    }
 
 }

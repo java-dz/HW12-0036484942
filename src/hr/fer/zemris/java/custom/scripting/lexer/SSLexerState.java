@@ -11,15 +11,15 @@ package hr.fer.zemris.java.custom.scripting.lexer;
  */
 public enum SSLexerState {
 
-	/**
-	 * This state reads text starting from where it last ended until the first
-	 * occurrence of the tag opening bracket sequence or the end of document.
-	 */
-	READING_TEXT,
+    /**
+     * This state reads text starting from where it last ended until the first
+     * occurrence of the tag opening bracket sequence or the end of document.
+     */
+    READING_TEXT,
 
-	/**
-	 * This state reads tags starting from from where it last ended until the
-	 * first occurrence of the tag closing bracket sequence.
-	 */
-	READING_TAGS
+    /**
+     * This state reads tags starting from from where it last ended until the
+     * first occurrence of the tag closing bracket sequence.
+     */
+    READING_TAGS
 }

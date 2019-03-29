@@ -16,36 +16,36 @@ import hr.fer.zemris.java.custom.scripting.lexer.SSTokenType;
  */
 public class TextNode extends Node {
 
-	/** Text of this text node. */
-	private final String text;
+    /** Text of this text node. */
+    private final String text;
 
-	/**
-	 * Constructs an instance of TextNode with the given text.
-	 * 
-	 * @param text text for this text node
-	 */
-	public TextNode(String text) {
-		super();
-		this.text = text;
-	}
+    /**
+     * Constructs an instance of TextNode with the given text.
+     *
+     * @param text text for this text node
+     */
+    public TextNode(String text) {
+        super();
+        this.text = text;
+    }
 
-	/**
-	 * Returns the text of this text node.
-	 * 
-	 * @return the text of this text node
-	 */
-	public String getText() {
-		return text;
-	}
-	
-	@Override
-	public String toString() {
-		return getText();
-	}
+    /**
+     * Returns the text of this text node.
+     *
+     * @return the text of this text node
+     */
+    public String getText() {
+        return text;
+    }
 
-	@Override
-	public void accept(INodeVisitor visitor) {
-		visitor.visitTextNode(this);
-	}
+    @Override
+    public String toString() {
+        return getText();
+    }
+
+    @Override
+    public void accept(INodeVisitor visitor) {
+        visitor.visitTextNode(this);
+    }
 
 }

@@ -14,26 +14,26 @@ import hr.fer.zemris.java.webserver.RequestContext;
  * @author Mario Bobic
  */
 public class VisitsWorker implements IWebWorker {
-	
-	/** Number of visits. */
-	private long counter = 0;
 
-	@Override
-	public void processRequest(RequestContext context) {
-		context.setMimeType("text/plain");
-		
-		long currentCount;
-		synchronized (this) {
-			counter++;
-			currentCount = counter;
-		}
-		
-		try {
-			context.write("Site visited " + currentCount + " times globally.\r\n");
-			context.write("Try running from different web browsers.");
-		} catch (IOException e) {
-			throw new RuntimeException(e);
-		}
-	}
-	
+    /** Number of visits. */
+    private long counter = 0;
+
+    @Override
+    public void processRequest(RequestContext context) {
+        context.setMimeType("text/plain");
+
+        long currentCount;
+        synchronized (this) {
+            counter++;
+            currentCount = counter;
+        }
+
+        try {
+            context.write("Site visited " + currentCount + " times globally.\r\n");
+            context.write("Try running from different web browsers.");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 }

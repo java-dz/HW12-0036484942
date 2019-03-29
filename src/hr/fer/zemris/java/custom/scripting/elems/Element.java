@@ -12,11 +12,11 @@ import hr.fer.zemris.java.custom.scripting.parser.SmartScriptParser;
  */
 public abstract class Element {
 
-	/**
-	 * Returns a string representation of the element.
-	 * 
-	 * @return a string representation of the element
-	 */
-	public abstract String asText();
-	
+    /**
+     * Returns a string representation of the element.
+     *
+     * @return a string representation of the element
+     */
+    public abstract String asText();
+
 }

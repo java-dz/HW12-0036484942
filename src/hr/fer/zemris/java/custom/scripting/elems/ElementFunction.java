@@ -18,40 +18,40 @@ import static hr.fer.zemris.java.custom.scripting.parser.SmartScriptConstantsAnd
  */
 public class ElementFunction extends Element {
 
-	/** The function name. */
-	private final String name;
-	
-	/**
-	 * Constructs an instance of ElementFunction with the given function name
-	 * without a {@link SmartScriptConstantsAndMethods#FUNCTION_MARK function
-	 * mark} symbol.
-	 * 
-	 * @param name name to be set to this function
-	 */
-	public ElementFunction(String name) {
-		super();
-		this.name = processName(name);
-	}
+    /** The function name. */
+    private final String name;
 
-	/**
-	 * Returns a string representation of the function name stored in this
-	 * element.
-	 */
-	@Override
-	public String asText() {
-		return FUNCTION_MARK + name;
-	}
-	
-	/**
-	 * Processes and returns the function name without a
-	 * {@link SmartScriptConstantsAndMethods#FUNCTION_MARK function mark}
-	 * symbol.
-	 * 
-	 * @param name name to be processed
-	 * @return a name without a function mark symbol.
-	 */
-	private static String processName(String name) {
-		return name.replace(FUNCTION_MARK, "");
-	}
+    /**
+     * Constructs an instance of ElementFunction with the given function name
+     * without a {@link SmartScriptConstantsAndMethods#FUNCTION_MARK function
+     * mark} symbol.
+     *
+     * @param name name to be set to this function
+     */
+    public ElementFunction(String name) {
+        super();
+        this.name = processName(name);
+    }
+
+    /**
+     * Returns a string representation of the function name stored in this
+     * element.
+     */
+    @Override
+    public String asText() {
+        return FUNCTION_MARK + name;
+    }
+
+    /**
+     * Processes and returns the function name without a
+     * {@link SmartScriptConstantsAndMethods#FUNCTION_MARK function mark}
+     * symbol.
+     *
+     * @param name name to be processed
+     * @return a name without a function mark symbol.
+     */
+    private static String processName(String name) {
+        return name.replace(FUNCTION_MARK, "");
+    }
 
 }
